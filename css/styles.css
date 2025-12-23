@@ -2885,12 +2885,13 @@ img.u-pull-left {
     z-index          : 100;
     display          : flex;
     height           : var(--header-height);
-    background-color : var(--color-body);
+    background-color : transparent;
     width            : 100%;
-    transition       : height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition       : height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) background-color 0.4s;
     position         : absolute;
     top              : 0;
     left             : 0;
+    color: #fff;
 }
 
 .s-header.sticky {
@@ -2898,6 +2899,9 @@ img.u-pull-left {
     border-bottom   : 1px solid var(--color-border);
     box-shadow      : var(--box-shadow);
     position        : fixed;
+    background-color : var(--color-body);
+    color: #000;
+    transition: background-color 0.4s;
 }
 
 .s-header__block {
@@ -2945,9 +2949,13 @@ img.u-pull-left {
     font-size           : 2rem;
     font-weight         : 400;
     line-height         : var(--vspace-1);
-    color               : var(--color-text-dark);
+    color               : #fff;
     padding             : 0 1.8rem;
     transition-property : color, background-color;
+}
+
+.s-header.sticky .s-header__nav a {
+    color: #000;
 }
 
 .s-header__nav a:focus,
@@ -3199,6 +3207,7 @@ img.u-pull-left {
     padding-top : calc(9.5 * var(--space));
     width       : 100%;
     position    : relative;
+    padding-bottom: calc(9.5 * var(--space));
 }
 
 .s-intro__content {
@@ -3231,6 +3240,7 @@ img.u-pull-left {
     color : var(--color-2-light);
 }
 
+
 .s-intro__text-huge {
     --text-huge-size : 24.6rem;
     font-size        : var(--text-huge-size);
@@ -3245,14 +3255,18 @@ img.u-pull-left {
  * ## intro bg
  * -------------------------------------------------------------------- */
 .s-intro__bg {
-    aspect-ratio        : 1/0.2;
+    aspect-ratio        : 1/0.5;
     width               : 100%;
-/*     background-color    : var(--color-gray-4);
-    background-image    : url(../images/intro-bg.jpg);
+    background-image    : url(../images/intro_bg.png);
     background-repeat   : no-repeat;
     background-position : center;
-    background-size     : cover; */
-    position            : relative;
+    background-size     : cover;
+    filter: blur(30px);
+    border-radius: 50%;
+    position            : absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 /* .s-intro__bg::after {
