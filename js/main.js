@@ -127,9 +127,13 @@
 
             if (loc > triggerHeight) {
                 hdr.classList.add('sticky');
+                
+
             } else {
                 hdr.classList.remove('sticky');
             }
+
+            
 
         });
 
