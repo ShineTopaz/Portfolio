@@ -618,6 +618,7 @@ textarea {
     flex    : 1 1 0%;
     padding : 0 var(--gutter);
 }
+.s-about__timeline {justify-content: space-between;}
 
 .collapse>.column,
 .column.collapse {
@@ -1616,7 +1617,7 @@ hr.fancy::before {
     line-height : 1.8275;
     color       : var(--color-text-dark);
 }
-.attention-getter span {font-size: var(--text-xl);font-weight: 600;}
+.attention-getter span {font-size: var(--text-xl);font-weight: 600; margin-right: 50px;}
 
 @media screen and (max-width: 900px) {
 
@@ -3348,7 +3349,7 @@ img.u-pull-left {
 .s-about {
     --subtitle-line-height         : var(--vspace-1_5);
     --timeline-left-padding        : var(--vspace-1_75);
-    --timeline-top-adjust          : calc(var(--subtitle-line-height) / 2);
+    --timeline-top-adjust          : calc((var(--subtitle-line-height) / 2) + 10px);
     --timeline-vertical-border-pos : 8px;
 
     padding-top                    : var(--vspace-5);
@@ -3365,12 +3366,16 @@ img.u-pull-left {
 
 .s-about__timeline-section {
     position : relative;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    border-radius: 30px; 
+    padding: 10px 20px;
 }
 
 .s-about__timeline-section::before {
     content          : "";
     width            : 1px;
-    height           : calc(100% - var(--timeline-top-adjust));
+    height           : calc(95% - var(--timeline-top-adjust));
     background-color : var(--color-border);
     position         : absolute;
     top              : var(--timeline-top-adjust);
@@ -3393,6 +3398,12 @@ img.u-pull-left {
     position         : absolute;
     top              : 50%;
     left             : calc(var(--timeline-vertical-border-pos) + 1px);
+}
+
+.s-about__career {
+    background: url(../images/career_bg.png) no-repeat center / cover;
+    
+    
 }
 
 /* --------------------------------------------------------------------
@@ -3454,7 +3465,11 @@ img.u-pull-left {
  * ## about skills
  * -------------------------------------------------------------------- */
 .s-about__skills {
-    padding-top : var(--vspace-3);
+    margin-top : var(--vspace-3);
+    padding-top: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(30px);
+    border-radius: 30px;
 }
 
 .s-about__skills .text-subtitle::after {
