@@ -625,6 +625,9 @@ textarea {
     padding : 0;
 }
 
+.s-about__intro 
+
+
 /* row utility classes
  */
 .row.row-wrap {
@@ -1613,11 +1616,11 @@ hr.fancy::before {
 .attention-getter {
     font-family : var(--font-1);
     font-weight : 400;
-    font-size   : var(--text-lg);
+    font-size   : var(--text-size);
     line-height : 1.8275;
     color       : var(--color-text-dark);
 }
-.attention-getter span {font-size: var(--text-xl);font-weight: 600; margin-right: 50px;}
+.attention-getter span {font-size: var(--text-lg);font-weight: 600; margin-right: 50px;}
 
 @media screen and (max-width: 900px) {
 
@@ -3238,7 +3241,7 @@ img.u-pull-left {
 }
 
 .s-intro__text h3 span {
-    color : var(--color-2-light);
+    color : #fff;
 }
 
 
@@ -3672,10 +3675,12 @@ img.u-pull-left {
 .folio-list {
     margin-top    : var(--vspace-2_5);
     margin-bottom : var(--vspace-2);
+    
 }
 
 .folio-list .column {
     margin-bottom : var(--vspace-1_25);
+    
 }
 
 .folio-list .column:nth-child(2n+1) {
@@ -3696,6 +3701,7 @@ img.u-pull-left {
     display  : block;
     position : relative;
     overflow : hidden;
+    border: 1px solid #eee;
 }
 
 .folio-item__thumb a::before {
@@ -4021,7 +4027,7 @@ img.u-pull-left {
  *
  * ------------------------------------------------------------------- */
 .s-footer {
-    padding-top    : calc(6 * var(--space));
+    padding-top    : calc(4 * var(--space));
     padding-bottom : var(--vspace-2_5);
     font-weight    : 300;
     position       : relative;
